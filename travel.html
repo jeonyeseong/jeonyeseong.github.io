@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>travel</title>
+    <script src="js/jquery-3.6.0.js"></script>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h2>여행 나들이</h2>
+            <nav>
+                <ul class="navi">
+                    <li><button id="btn1">전주</button></li>
+                    <li><button id="btn2">안동</button></li>
+                    <li><button id="btn3">제주도</button></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="content">
+            <article id="article">
+                
+            </article>
+            <article>
+                
+                
+            </article>
+        </section>
+        <aside id="aside">
+            
+        </aside>
+
+        <footer id="footer">
+        </footer>
+
+    </div>
+
+    <style>
+    #container		{ background-color:#F0F0F0; width:960px; margin:5 auto; padding:10px; }
+    h2				{padding: 10px;}
+    header			{ background-color:gray; height:100px; }
+    #content		{ background-color:white; float:left; width:640px; height:400px; padding: 0px 5px;}
+    #sideinfo		{ background-color:#DCDAD9; float:right; width:280px; height:400px; }
+    footer			{ background-color:#555555; clear:both; height:100px; padding: 5px 10px;}
+    footer p{
+        text-align: center;
+    }
+    aside	{
+        background-color: lightgray;
+        width: 310px;
+        height: 400px;
+        float: left;
+    }
+    aside h4{
+        padding-left: 10px;
+    }
+
+    nav ul.navi{
+        margin-right: 10px;
+        list-style: none;
+        display: flex;
+        justify-content: flex-end
+    }
+    .navi li a{
+        text-decoration: none;
+        color: black;
+        padding: 0px 5px;
+    }
+    .navi li a:hover{
+        color: white;
+        cursor: pointer;
+    }
+
+
+    </style>
+    <script>
+    $(btn1).click(()=>{
+        $("article, aside, footer").empty();
+
+        $(`<span><img src="image/전1.jpg" alt=""></span>
+        <span><img src="image/전2.jpg" alt=""></span>
+        <span><img src="image/전3.jpg" alt=""></span>
+        <span><img src="image/전4.jpg" alt=""></span>
+        <span><img src="image/전5.jpg" alt=""></span>`)
+        .appendTo($(article));
+
+        $(`<ul style="list-style: none;">
+            <li>전주한옥마을</li>
+        </ul>`)
+        .appendTo($(aside));
+        $(`<p>&lt;<strong>2021년 전주</strong>&gt;</p>`)
+        .appendTo($(footer));
+        
+        
+        
+
+        //페이드인 페이드아웃
+    // (function(){ 
+    //     $('#slide3>ul>li:first-child').fadeOut() 
+    //     .next().fadeIn().end(1000) .appendTo('#slide3>ul'); 
+    // },3000);
+
+        
+        
+    });
+    $(btn2).click(()=>{
+        $("article, aside, footer").empty();
+        
+        $(`<span><img src="image/경1.jpg" alt=""></span>
+        <span><img src="image/경2.jpg" alt=""></span>
+        <span><img src="image/경3.jpg" alt=""></span>
+        <span><img src="image/경4.jpg" alt=""></span>`)
+        .appendTo($(article));
+        
+        $(`<ul style="list-style: none;">
+            <li>경주인줄 알았지만</li>
+            <li>안동이였던 어느 호수</li>
+            </ul>`)
+            .appendTo($(aside));
+            $(`<p>&lt;<strong>2019년 안동시</strong>&gt;</p>`)
+            .appendTo($(footer));
+
+            
+            
+        
+        
+    });
+    $(btn3).click(()=>{
+        $("article, aside, footer").empty();
+        
+        $(`<span><img src="image/제1.jpg" alt=""></span>
+        <span><img src="image/제2.jpg" alt=""></span>
+        <span><img src="image/제3.jpg" alt=""></span>
+        <span><img src="image/제4.jpg" alt=""></span>
+        <span><img src="image/제5.jpg" alt=""></span>`)
+        .appendTo($(article));
+        
+        $(`<ul style="list-style: none;">
+            <li>제주도 동쪽 지역</li>
+            <li>섭지코지</li>
+            <li>메이즈랜드</li>
+            <li>등등</li>
+            </ul>`)
+            .appendTo($(aside));
+            $(`<p>&lt;<strong>2019년 제주도</strong>&gt;</p>`)
+            .appendTo($(footer));
+ 
+        });
+            
+            
+        
+        
+    //페이드인 페이드아웃
+
+
+    //상하슬라이딩 
+
+
+
+        //좌우슬라이딩 
+    
+    
+    </script>
+    <style>
+        img{
+            width: 200px;
+            height: 200px;
+        }
+        /*--------좌우슬라이딩---------*/ 
+
+
+    </style>
+</body>
+</html>
